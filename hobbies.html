@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夏亚宁的爱好 | 骑行 · 摄影 · 徒步</title>
+    <meta name="description" content="探索夏亚宁的三大热爱：骑行探索城市、摄影记录瞬间、徒步亲近自然。">
+    <meta name="keywords" content="骑行,摄影,徒步,户外,爱好,生活方式">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hobby-section {
+            margin-bottom: 4rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+        .hobby-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .hobby-img {
+            flex: 1;
+            min-width: 250px;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            background: rgba(0,0,0,0.2);
+            aspect-ratio: 4/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hobby-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .hobby-img:hover img {
+            transform: scale(1.02);
+        }
+        .hobby-text {
+            flex: 1;
+            padding: 1rem;
+        }
+        .hobby-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .gallery-mini {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .gallery-mini img {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: 0.2s;
+        }
+        .gallery-mini img:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .hobby-section, .hobby-section:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="glow-bg"></div>
+<div class="container">
+    <nav class="navbar">
+        <div class="logo">Xyn Studio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于</a></li>
+            <li><a href="hobbies.html" class="active">爱好</a></li>
+            <li><a href="resume.html">简历</a></li>
+            <li><a href="contact.html">联系</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="page-title">我的热爱 · 生活映像</h1>
+    <div class="section-subtitle">三个关键词，定义我的生活方式</div>
+
+    <div id="cycling" class="hobby-section glass-card" style="padding: 2rem;">
+        <div class="hobby-img">
+            <img src="https://picsum.photos/id/20/600/400" alt="Cycling">
+        </div>
+        <div class="hobby-text">
+            <h2><i class="fas fa-bicycle"></i> 骑行 · 自由的风</h2>
+            <p>对我来说，骑行不只是运动，更是一种冥想。从城市街道到山野小径，每一次蹬踏都让我更接近自然。我喜欢在周末和骑友一起探索未知路线，感受风的速度，也享受独骑时的宁静。</p>
+            <p><strong>最爱路线：</strong> 西湖群山环线、千岛湖绿道、青海湖骑行挑战。</p>
+            <div class="gallery-mini">
+                <img src="https://picsum.photos/id/29/100/100" alt="ride1">
+                <img src="https://picsum.photos/id/58/100/100" alt="ride2">
+                <img src="https://picsum.photos/id/114/100/100" alt="ride3">
+            </div>
+        </div>
+    </div>
+
+    <div id="photography" class="hobby-section glass-card" style="padding: 2rem;">
+        <div class="hobby-img">
+            <img src="https://picsum.photos/id/96/600/400" alt="Photography">
+        </div>
+        <div class="hobby-text">
+            <h2><i class="fas fa-camera"></i> 摄影 · 定格瞬间</h2>
+            <p>相机是我的第三只眼睛。我喜欢街头摄影，捕捉普通人的情绪；也爱风光摄影，追逐日出与星空。每一张照片都是对时间的温柔反抗。</p>
+            <p><strong>设备：</strong> Sony A7M4 + 35mm f/1.4, DJI Mini 3 Pro</p>
+            <div class="gallery-mini">
+                <img src="https://picsum.photos/id/15/100/100" alt="photo1">
+                <img src="https://picsum.photos/id/42/100/100" alt="photo2">
+                <img src="https://picsum.photos/id/77/100/100" alt="photo3">
+            </div>
+        </div>
+    </div>
+
+    <div id="hiking" class="hobby-section glass-card" style="padding: 2rem;">
+        <div class="hobby-img">
+            <img src="https://picsum.photos/id/104/600/400" alt="Hiking">
+        </div>
+        <div class="hobby-text">
+            <h2><i class="fas fa-hiking"></i> 徒步 · 丈量山海</h2>
+            <p>用脚步抵达车辆无法到达的地方。徒步让我学会慢下来，观察一朵花的开放，聆听溪水的声音。走过雨崩、武功山、虎跳峡，下一站是新疆乌孙古道。</p>
+            <p><strong>徒步装备：</strong> 轻量化背包、登山杖、防水靴，以及一颗勇敢的心。</p>
+            <div class="gallery-mini">
+                <img src="https://picsum.photos/id/83/100/100" alt="hike1">
+                <img src="https://picsum.photos/id/110/100/100" alt="hike2">
+                <img src="https://picsum.photos/id/127/100/100" alt="hike3">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 夏亚宁 | 保持热爱，奔赴山海</p>
+    </footer>
+</div>
+</body>
+</html>
