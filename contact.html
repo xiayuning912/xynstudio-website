@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系夏亚宁 | 期待与你交流</title>
+    <meta name="description" content="通过邮箱或社交媒体联系夏亚宁，探讨合作、技术或分享故事。">
+    <meta name="keywords" content="联系夏亚宁,邮箱,社交媒体,合作">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .contact-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .contact-info, .contact-form {
+            flex: 1;
+            padding: 2rem;
+        }
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .social-links a {
+            color: white;
+            font-size: 2rem;
+            transition: 0.2s;
+        }
+        .social-links a:hover {
+            color: #b48eff;
+            transform: translateY(-3px);
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 1rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            font-family: inherit;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #b48eff;
+        }
+        button {
+            background: #7f5fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 2rem;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: #9a7aff;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .contact-flex {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="glow-bg"></div>
+<div class="container">
+    <nav class="navbar">
+        <div class="logo">Xyn Studio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于</a></li>
+            <li><a href="hobbies.html">爱好</a></li>
+            <li><a href="resume.html">简历</a></li>
+            <li><a href="contact.html" class="active">联系</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="page-title">联系我</h1>
+    <div class="contact-flex">
+        <div class="glass-card contact-info">
+            <h2><i class="fas fa-envelope"></i> 保持连接</h2>
+            <p>如果你有项目合作、技术交流，或者只是想聊聊骑行与摄影，都欢迎联系我。</p>
+            <p><strong>邮箱：</strong> xiayuning@work.com</p>
+            <p><strong>地址：</strong> 中国 · 杭州</p>
+            <div class="social-links">
+                <a href="https://github.com/xiaoyuning912" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="glass-card contact-form">
+            <h2><i class="fas fa-paper-plane"></i> 发送消息</h2>
+            <form action="https://formspree.io/f/your-endpoint" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="你的姓名" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="电子邮箱" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="4" placeholder="留言内容..."></textarea>
+                </div>
+                <button type="submit">发送 <i class="fas fa-arrow-right"></i></button>
+            </form>
+            <p style="font-size: 0.8rem; margin-top: 1rem;">* 表单使用 Formspree 服务，提交后我会尽快回复。</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 夏亚宁 | 期待与你相遇</p>
+    </footer>
+</div>
+</body>
+</html>
