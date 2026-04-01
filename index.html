@@ -2,95 +2,21 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>夏雨柠 · 个人作品集</title>
-    <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夏亚宁 · 个人官网 | 科技与浪漫并存</title>
+    <meta name="description" content="夏亚宁的个人官方网站，展示骑行、摄影、徒步的热爱，以及技术履历与创意作品。">
+    <meta name="keywords" content="夏亚宁,个人网站,作品集,骑行,摄影,徒步,前端开发,UI设计">
+    <meta name="author" content="夏亚宁">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0a0f2c 0%, #12163a 50%, #1b1f4e 100%);
-            color: #f0f0f8;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-        }
-
-        /* 浪漫科技氛围 —— 动态光晕 */
-        .glow-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-        .glow-bg::before {
-            content: '';
-            position: absolute;
-            width: 150%;
-            height: 150%;
-            top: -25%;
-            left: -25%;
-            background: radial-gradient(circle at 30% 40%, rgba(120, 80, 255, 0.15), transparent 60%);
-            animation: drift 20s infinite alternate;
-        }
-        .glow-bg::after {
-            content: '';
-            position: absolute;
-            width: 150%;
-            height: 150%;
-            bottom: -25%;
-            right: -25%;
-            background: radial-gradient(circle at 70% 80%, rgba(255, 100, 180, 0.12), transparent 60%);
-            animation: driftReverse 18s infinite alternate;
-        }
-        @keyframes drift {
-            0% { transform: translate(0%, 0%) scale(1); opacity: 0.5; }
-            100% { transform: translate(5%, 5%) scale(1.1); opacity: 0.8; }
-        }
-        @keyframes driftReverse {
-            0% { transform: translate(0%, 0%) scale(1); opacity: 0.4; }
-            100% { transform: translate(-4%, -3%) scale(1.15); opacity: 0.7; }
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem 4rem;
-        }
-
-        /* 玻璃卡片效果 */
-        .glass-card {
-            background: rgba(20, 24, 54, 0.55);
-            backdrop-filter: blur(12px);
-            border-radius: 2rem;
-            border: 1px solid rgba(120, 100, 255, 0.3);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-            transition: all 0.3s ease;
-        }
-        .glass-card:hover {
-            border-color: rgba(150, 130, 255, 0.6);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
-            transform: translateY(-4px);
-        }
-
-        /* 头部区域 */
+        /* 首页特有样式 */
         .hero {
             text-align: center;
             padding: 3rem 2rem;
             margin-bottom: 3rem;
-            position: relative;
-            overflow: hidden;
         }
-        .avatar {
+        .hero .avatar {
             width: 120px;
             height: 120px;
             background: linear-gradient(135deg, #7f5fff, #b26bff);
@@ -102,333 +28,94 @@
             font-weight: 600;
             color: white;
             margin-bottom: 1.5rem;
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4), 0 0 0 4px rgba(255, 255, 255, 0.15);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
         }
         .hero h1 {
             font-size: 2.8rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #ffffff, #c2b6ff);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
         }
         .hero .tagline {
             font-size: 1.2rem;
-            margin-top: 0.8rem;
-            opacity: 0.85;
-            font-weight: 300;
-            letter-spacing: 0.3px;
+            opacity: 0.9;
         }
-        .hero .romantic-touch {
-            font-size: 0.95rem;
-            margin-top: 1rem;
-            color: #cbb8ff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .hero .romantic-touch i {
-            font-size: 0.9rem;
-        }
-
-        /* 模块标题 */
-        .section-title {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border-left: 4px solid #a07cff;
-            padding-left: 1.2rem;
-        }
-        .section-title i {
-            color: #b48eff;
-            font-size: 1.8rem;
-        }
-
-        /* 爱好卡片网格 */
-        .hobbies-grid {
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-bottom: 4rem;
+            margin: 3rem 0;
         }
-        .hobby-card {
-            padding: 1.8rem;
-            text-align: center;
-            transition: all 0.25s ease;
-        }
-        .img-placeholder {
-            width: 100%;
-            height: 200px;
-            background: rgba(25, 30, 65, 0.6);
-            border-radius: 1.2rem;
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border: 1px solid rgba(150, 130, 255, 0.3);
-            transition: 0.2s;
-        }
-        .img-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-        .hobby-card:hover .img-placeholder img {
-            transform: scale(1.03);
-        }
-        /* 占位图样式（未提供图片时优雅显示） */
-        .img-placeholder .no-img {
-            font-size: 3rem;
-            color: #b8a9ff;
-            opacity: 0.7;
-        }
-        .hobby-card h3 {
-            font-size: 1.7rem;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        .hobby-card p {
-            color: #cfc9f0;
-            font-size: 0.95rem;
-        }
-
-        /* 简历区域 - 双栏布局 */
-        .resume-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        .resume-card {
+        .feature-card {
             padding: 2rem;
+            text-align: center;
         }
-        .resume-card h3 {
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #b48eff;
+            margin-bottom: 1rem;
+        }
+        .feature-card h3 {
             font-size: 1.6rem;
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px dashed rgba(150, 130, 255, 0.5);
-            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
         }
-        .timeline-item {
-            margin-bottom: 1.5rem;
+        .feature-card p {
+            color: #cfc9f0;
         }
-        .timeline-item .date {
-            font-size: 0.85rem;
-            color: #bcabff;
-            margin-bottom: 0.25rem;
-        }
-        .timeline-item h4 {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        .timeline-item p {
-            color: #e2dcff;
-            font-size: 0.9rem;
-        }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 1rem;
-        }
-        .skill-tag {
-            background: rgba(120, 100, 255, 0.2);
-            backdrop-filter: blur(4px);
-            padding: 0.4rem 1rem;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid rgba(160, 130, 255, 0.4);
-            transition: 0.2s;
-        }
-        .skill-tag:hover {
-            background: rgba(120, 100, 255, 0.4);
-            transform: scale(1.02);
-        }
-
-        /* 浪漫小彩蛋 */
-        .romantic-note {
+        .cta {
             text-align: center;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #c3b4ff;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-        .romantic-note span i {
-            margin-right: 6px;
-        }
-
-        /* 响应式 */
-        @media (max-width: 800px) {
-            .resume-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .container {
-                padding: 1.5rem;
-            }
-            .section-title {
-                font-size: 1.6rem;
-            }
-        }
-
-        /* 自定义滚动条 */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0e112c;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #6b5bc2;
-            border-radius: 10px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            font-size: 0.8rem;
-            opacity: 0.6;
+            margin: 2rem 0;
         }
     </style>
 </head>
 <body>
 <div class="glow-bg"></div>
 <div class="container">
-    <!-- 个人头部 -->
+    <nav class="navbar">
+        <div class="logo">Xyn Studio</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">首页</a></li>
+            <li><a href="about.html">关于</a></li>
+            <li><a href="hobbies.html">爱好</a></li>
+            <li><a href="resume.html">简历</a></li>
+            <li><a href="contact.html">联系</a></li>
+        </ul>
+    </nav>
+
     <div class="hero glass-card">
         <div class="avatar">夏</div>
-        <h1>夏亚宁 · XIA YANING</h1>
-        <div class="tagline">数字创作者 · 探索无限可能</div>
-        <div class="romantic-touch">
-            <i class="fas fa-moon"></i> 捕捉光影，奔赴山海 <i class="fas fa-star"></i>
+        <h1 class="page-title">夏亚宁</h1>
+        <div class="tagline">创意开发者 · 光影追逐者 · 山海收藏家</div>
+        <div style="margin-top: 1rem;">
+            <i class="fas fa-moon"></i> 用代码构建浪漫，用镜头记录世界 <i class="fas fa-star"></i>
         </div>
     </div>
 
-    <!-- 爱好模块 -->
-    <div>
-        <div class="section-title">
-            <i class="fas fa-heart"></i>
-            <span>热爱 · 让生活发光</span>
+    <div class="features-grid">
+        <div class="feature-card glass-card">
+            <i class="fas fa-bicycle"></i>
+            <h3>骑行</h3>
+            <p>风与自由，探索城市边界与山川湖海。</p>
+            <a href="hobbies.html#cycling" class="btn" style="margin-top: 1rem;">了解更多</a>
         </div>
-        <div class="hobbies-grid">
-            <!-- 骑行 -->
-            <div class="hobby-card glass-card">
-                <div class="img-placeholder">
-                    <!-- 示例图片（可替换为真实链接） -->
-                    <img src="https://picsum.photos/id/20/400/300" alt="Cycling">
-                </div>
-                <h3><i class="fas fa-bicycle"></i> 骑行</h3>
-                <p>风在耳畔，路在轮下。喜欢用两轮丈量城市与山野，感受自由与坚持。</p>
-            </div>
-            <!-- 摄影 -->
-            <div class="hobby-card glass-card">
-                <div class="img-placeholder">
-                    <img src="https://picsum.photos/id/96/400/300" alt="Photography">
-                </div>
-                <h3><i class="fas fa-camera"></i> 摄影</h3>
-                <p>用镜头定格瞬间的情绪与故事，寻找光影中的诗意与真实。</p>
-            </div>
-            <!-- 徒步 -->
-            <div class="hobby-card glass-card">
-                <div class="img-placeholder">
-                    <img src="https://picsum.photos/id/104/400/300" alt="Hiking">
-                </div>
-                <h3><i class="fas fa-hiking"></i> 徒步</h3>
-                <p>走入森林与山脉，在脚步中沉淀自己，每一步都是与自然的对话。</p>
-            </div>
+        <div class="feature-card glass-card">
+            <i class="fas fa-camera"></i>
+            <h3>摄影</h3>
+            <p>捕捉瞬间的感动，用光影讲故事。</p>
+            <a href="hobbies.html#photography" class="btn" style="margin-top: 1rem;">了解更多</a>
+        </div>
+        <div class="feature-card glass-card">
+            <i class="fas fa-hiking"></i>
+            <h3>徒步</h3>
+            <p>一步步接近自然，也靠近自己。</p>
+            <a href="hobbies.html#hiking" class="btn" style="margin-top: 1rem;">了解更多</a>
         </div>
     </div>
 
-    <!-- 个人简历/工作背景 -->
-    <div>
-        <div class="section-title">
-            <i class="fas fa-briefcase"></i>
-            <span>履历 · 步履不停</span>
-        </div>
-        <div class="resume-grid">
-            <!-- 左侧：教育与工作经历 -->
-            <div class="resume-card glass-card">
-                <h3><i class="fas fa-graduation-cap"></i> 教育背景</h3>
-                <div class="timeline-item">
-                    <div class="date">2022 – 至今</div>
-                    <h4>浙江大学 · 计算机科学与技术</h4>
-                    <p>主修人工智能、人机交互，GPA 3.9/4.0，校优秀学生奖学金。</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="date">2019 – 2022</div>
-                    <h4>杭州外国语学校</h4>
-                    <p>理科实验班，全国信息学竞赛省一等奖。</p>
-                </div>
-                <h3 style="margin-top: 2rem;"><i class="fas fa-briefcase"></i> 工作经历</h3>
-                <div class="timeline-item">
-                    <div class="date">2024.07 – 至今</div>
-                    <h4>前端开发实习生 · 字节跳动</h4>
-                    <p>参与抖音创作者平台重构，使用React + TypeScript，优化性能20%。</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="date">2023.09 – 2024.01</div>
-                    <h4>设计助理 · 极光设计工作室</h4>
-                    <p>负责品牌视觉延展与网页界面设计，协同开发落地3个企业项目。</p>
-                </div>
-            </div>
-            <!-- 右侧：技能、语言等 -->
-            <div class="resume-card glass-card">
-                <h3><i class="fas fa-code"></i> 技术栈</h3>
-                <div class="skills">
-                    <span class="skill-tag">HTML5/CSS3</span>
-                    <span class="skill-tag">JavaScript/TS</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Vue.js</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Git/GitHub</span>
-                    <span class="skill-tag">Figma</span>
-                </div>
-                <h3 style="margin-top: 2rem;"><i class="fas fa-language"></i> 语言 & 软技能</h3>
-                <div class="skills">
-                    <span class="skill-tag">中文 (母语)</span>
-                    <span class="skill-tag">英语 (IELTS 7.5)</span>
-                    <span class="skill-tag">团队协作</span>
-                    <span class="skill-tag">创意设计</span>
-                    <span class="skill-tag">跨部门沟通</span>
-                </div>
-                <h3 style="margin-top: 2rem;"><i class="fas fa-award"></i> 荣誉 & 证书</h3>
-                <div class="timeline-item">
-                    <p>✨ 2024 中国大学生计算机设计大赛 国赛二等奖</p>
-                    <p>✨ 国家励志奖学金 · 校三好学生</p>
-                    <p>✨ 谷歌 UX Design 证书 (Coursera)</p>
-                </div>
-            </div>
-        </div>
+    <div class="cta">
+        <a href="about.html" class="btn">关于我 <i class="fas fa-arrow-right"></i></a>
     </div>
 
-    <!-- 小浪漫彩蛋 + 联系暗示 -->
-    <div class="romantic-note">
-        <span><i class="fas fa-map-marker-alt"></i> 杭州 · 西子湖畔</span>
-        <span><i class="fas fa-envelope"></i> xiayuning@work.com</span>
-        <span><i class="fab fa-github"></i> github.com/xiayuning</span>
-        <span><i class="fas fa-camera-retro"></i> 镜头内外，皆温柔</span>
-    </div>
     <footer>
-        🌙 设计 · 代码 · 浪漫实践 | 保持热爱，奔赴山海
+        <p>© 2025 夏亚宁 | 保持热爱，奔赴山海</p>
     </footer>
 </div>
 </body>
