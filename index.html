@@ -13,56 +13,83 @@
         /* 首页特有样式 */
         .hero {
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem 3.5rem;
             margin-bottom: 3rem;
         }
         .hero .avatar {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #7f5fff, #b26bff);
+            width: 96px;
+            height: 96px;
+            background: var(--surface-2, #f2f2f0);
+            border: 1px solid var(--border, #e8e8e5);
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 2.2rem;
             font-weight: 600;
-            color: white;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+            color: var(--text, #111);
+            margin-bottom: 1.75rem;
         }
         .hero h1 {
             font-size: 2.8rem;
-            margin-bottom: 0.5rem;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.6rem;
         }
         .hero .tagline {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1rem;
+            color: var(--text-3, #999);
+            min-height: 1.5em;
+        }
+        .hero .sub-line {
+            margin-top: 1rem;
+            font-size: 0.88rem;
+            color: var(--text-3, #999);
+            letter-spacing: 0.03em;
         }
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
             margin: 3rem 0;
         }
         .feature-card {
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             text-align: center;
         }
-        .feature-card i {
-            font-size: 2.5rem;
-            color: #b48eff;
-            margin-bottom: 1rem;
+        .feature-card .icon-wrap {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: var(--surface-2, #f2f2f0);
+            border: 1px solid var(--border, #e8e8e5);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--text-2, #555);
+            margin-bottom: 1.25rem;
         }
         .feature-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.6rem;
         }
         .feature-card p {
-            color: #cfc9f0;
+            color: var(--text-3, #999);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .feature-card .btn {
+            margin-top: 1.5rem;
         }
         .cta {
             text-align: center;
-            margin: 2rem 0;
+            margin: 2.5rem 0;
+        }
+        @media (max-width: 600px) {
+            .hero { padding: 2.5rem 1rem 2rem; }
+            .hero h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -87,29 +114,27 @@
         <div class="avatar">夏</div>
         <h1 class="page-title">夏亚宁</h1>
         <div class="tagline"><span id="typewriter">创意开发者 · 光影追逐者 · 山海收藏家</span></div>
-        <div style="margin-top: 1rem;">
-            <i class="fas fa-moon"></i> 用代码构建浪漫，用镜头记录世界 <i class="fas fa-star"></i>
-        </div>
+        <div class="sub-line">用代码构建浪漫 · 用镜头记录世界</div>
     </div>
 
     <div class="features-grid">
         <div class="feature-card glass-card scroll-reveal">
-            <i class="fas fa-bicycle"></i>
+            <div class="icon-wrap"><i class="fas fa-bicycle"></i></div>
             <h3>骑行</h3>
             <p>风与自由，探索城市边界与山川湖海。</p>
-            <a href="hobbies.html#cycling" class="btn" style="margin-top: 1rem;">了解更多</a>
+            <a href="hobbies.html#cycling" class="btn">了解更多</a>
         </div>
         <div class="feature-card glass-card scroll-reveal" style="transition-delay: 0.1s;">
-            <i class="fas fa-camera"></i>
+            <div class="icon-wrap"><i class="fas fa-camera"></i></div>
             <h3>摄影</h3>
             <p>捕捉瞬间的感动，用光影讲故事。</p>
-            <a href="hobbies.html#photography" class="btn" style="margin-top: 1rem;">了解更多</a>
+            <a href="hobbies.html#photography" class="btn">了解更多</a>
         </div>
         <div class="feature-card glass-card scroll-reveal" style="transition-delay: 0.2s;">
-            <i class="fas fa-hiking"></i>
+            <div class="icon-wrap"><i class="fas fa-hiking"></i></div>
             <h3>徒步</h3>
             <p>一步步接近自然，也靠近自己。</p>
-            <a href="hobbies.html#hiking" class="btn" style="margin-top: 1rem;">了解更多</a>
+            <a href="hobbies.html#hiking" class="btn">了解更多</a>
         </div>
     </div>
 

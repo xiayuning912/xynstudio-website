@@ -12,49 +12,71 @@
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            gap: 3rem;
             margin: 2rem 0;
         }
         .about-text {
-            padding: 2rem;
+            padding: 2.5rem;
+        }
+        .about-text p {
+            color: var(--text-2);
+            margin-bottom: 1rem;
+            line-height: 1.75;
         }
         .about-text h2 {
-            margin-top: 1rem;
-            font-size: 1.8rem;
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: var(--text);
+        }
+        .about-text h2 i {
+            color: var(--silver);
+            margin-right: 0.4rem;
+            font-size: 0.95rem;
         }
         .skill-bars {
-            margin-top: 1.5rem;
+            margin-top: 1.25rem;
         }
         .skill-item {
             margin-bottom: 1rem;
         }
         .skill-name {
-            display: block;
-            margin-bottom: 0.3rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-2);
+            margin-bottom: 0.4rem;
         }
         .skill-bar {
-            background: rgba(255,255,255,0.1);
+            background: var(--surface-2, #f2f2f0);
             border-radius: 20px;
-            height: 8px;
+            height: 5px;
             overflow: hidden;
         }
         .skill-progress {
-            background: linear-gradient(90deg, #7f5fff, #b26bff);
+            background: var(--accent);
             height: 100%;
             border-radius: 20px;
             width: 0%;
         }
         .quote {
             font-style: italic;
-            border-left: 3px solid #b48eff;
-            padding-left: 1.5rem;
+            border-left: 2px solid var(--silver);
+            padding-left: 1.25rem;
             margin: 2rem 0;
-            color: #cfc9ff;
+            color: var(--text-3);
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+        .lang-item {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-2);
         }
         @media (max-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-text { padding: 1.5rem; }
         }
     </style>
 </head>
@@ -75,14 +97,14 @@
         </ul>
     </nav>
 
-    <div class="glass-card about-text scroll-reveal">
+        <div class="glass-card about-text scroll-reveal">
         <h1 class="page-title">关于我</h1>
         <div class="about-grid">
             <div>
                 <p>嗨，我是夏亚宁，一名热爱创造的设计师与开发者。我相信科技应该富有诗意，设计应该传递温度。目前就读于浙江大学计算机科学与技术专业，同时活跃在开源社区与创意设计领域。</p>
                 <p>我的工作聚焦于前端开发、交互设计，以及如何将自然美学融入数字产品。除了写代码，我最大的热情在于骑行、摄影和徒步——这些爱好让我保持对世界的好奇，也让我更懂得如何设计有共鸣的体验。</p>
                 <div class="quote">
-                    <i class="fas fa-quote-left"></i> 设计的本质，是让复杂的世界变得简单而动人。
+                    设计的本质，是让复杂的世界变得简单而动人。
                 </div>
                 <p><strong>核心信念：</strong> 技术与人文的交汇处，藏着最动人的解决方案。</p>
             </div>
@@ -90,29 +112,29 @@
                 <h2><i class="fas fa-code"></i> 技术栈</h2>
                 <div class="skill-bars">
                     <div class="skill-item">
-                        <span class="skill-name">HTML5/CSS3</span>
+                        <span class="skill-name">HTML5 / CSS3 <span>95%</span></span>
                         <div class="skill-bar"><div class="skill-progress" data-width="95%" style="width: 0%"></div></div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">JavaScript/TypeScript</span>
+                        <span class="skill-name">JavaScript / TypeScript <span>88%</span></span>
                         <div class="skill-bar"><div class="skill-progress" data-width="88%" style="width: 0%"></div></div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">React/Vue</span>
+                        <span class="skill-name">React / Vue <span>85%</span></span>
                         <div class="skill-bar"><div class="skill-progress" data-width="85%" style="width: 0%"></div></div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">UI/UX 设计</span>
+                        <span class="skill-name">UI / UX 设计 <span>80%</span></span>
                         <div class="skill-bar"><div class="skill-progress" data-width="80%" style="width: 0%"></div></div>
                     </div>
                 </div>
                 <h2 style="margin-top: 2rem;"><i class="fas fa-globe"></i> 语言</h2>
-                <p>中文（母语） · 英语（IELTS 7.5，读写流利）</p>
+                <p class="lang-item">中文（母语） · 英语（IELTS 7.5，读写流利）</p>
                 <h2><i class="fas fa-heart"></i> 人生格言</h2>
-                <p>“保持好奇，永远探索，温柔地改变世界。”</p>
+                <p class="lang-item">"保持好奇，永远探索，温柔地改变世界。"</p>
             </div>
         </div>
-    </div>
+    </div></div>
 
     <footer>
         <p>© 2025 夏亚宁 | 持续更新中</p>
