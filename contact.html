@@ -75,6 +75,9 @@
 <div class="container">
     <nav class="navbar">
         <div class="logo">Xyn Studio</div>
+        <button class="hamburger" aria-label="菜单" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">首页</a></li>
             <li><a href="about.html">关于</a></li>
@@ -86,20 +89,20 @@
 
     <h1 class="page-title">联系我</h1>
     <div class="contact-flex">
-        <div class="glass-card contact-info">
+        <div class="glass-card contact-info scroll-reveal">
             <h2><i class="fas fa-envelope"></i> 保持连接</h2>
             <p>如果你有项目合作、技术交流，或者只是想聊聊骑行与摄影，都欢迎联系我。</p>
             <p><strong>邮箱：</strong> xiayuning@work.com</p>
             <p><strong>地址：</strong> 中国 · 杭州</p>
             <div class="social-links">
-                <a href="https://github.com/xiaoyuning912" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/xiayuning912" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
 
-        <div class="glass-card contact-form">
+        <div class="glass-card contact-form scroll-reveal">
             <h2><i class="fas fa-paper-plane"></i> 发送消息</h2>
             <form action="https://formspree.io/f/your-endpoint" method="POST">
                 <div class="form-group">
@@ -121,5 +124,7 @@
         <p>© 2025 夏亚宁 | 期待与你相遇</p>
     </footer>
 </div>
+<a id="back-to-top" class="back-to-top" aria-label="回到顶部"><i class="fas fa-chevron-up"></i></a>
+<script src="main.js"></script>
 </body>
 </html>

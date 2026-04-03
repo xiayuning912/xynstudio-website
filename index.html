@@ -71,6 +71,9 @@
 <div class="container">
     <nav class="navbar">
         <div class="logo">Xyn Studio</div>
+        <button class="hamburger" aria-label="菜单" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html" class="active">首页</a></li>
             <li><a href="about.html">关于</a></li>
@@ -80,29 +83,29 @@
         </ul>
     </nav>
 
-    <div class="hero glass-card">
+    <div class="hero glass-card scroll-reveal">
         <div class="avatar">夏</div>
         <h1 class="page-title">夏亚宁</h1>
-        <div class="tagline">创意开发者 · 光影追逐者 · 山海收藏家</div>
+        <div class="tagline"><span id="typewriter">创意开发者 · 光影追逐者 · 山海收藏家</span></div>
         <div style="margin-top: 1rem;">
             <i class="fas fa-moon"></i> 用代码构建浪漫，用镜头记录世界 <i class="fas fa-star"></i>
         </div>
     </div>
 
     <div class="features-grid">
-        <div class="feature-card glass-card">
+        <div class="feature-card glass-card scroll-reveal">
             <i class="fas fa-bicycle"></i>
             <h3>骑行</h3>
             <p>风与自由，探索城市边界与山川湖海。</p>
             <a href="hobbies.html#cycling" class="btn" style="margin-top: 1rem;">了解更多</a>
         </div>
-        <div class="feature-card glass-card">
+        <div class="feature-card glass-card scroll-reveal" style="transition-delay: 0.1s;">
             <i class="fas fa-camera"></i>
             <h3>摄影</h3>
             <p>捕捉瞬间的感动，用光影讲故事。</p>
             <a href="hobbies.html#photography" class="btn" style="margin-top: 1rem;">了解更多</a>
         </div>
-        <div class="feature-card glass-card">
+        <div class="feature-card glass-card scroll-reveal" style="transition-delay: 0.2s;">
             <i class="fas fa-hiking"></i>
             <h3>徒步</h3>
             <p>一步步接近自然，也靠近自己。</p>
@@ -118,5 +121,7 @@
         <p>© 2025 夏亚宁 | 保持热爱，奔赴山海</p>
     </footer>
 </div>
+<a id="back-to-top" class="back-to-top" aria-label="回到顶部"><i class="fas fa-chevron-up"></i></a>
+<script src="main.js"></script>
 </body>
 </html>
